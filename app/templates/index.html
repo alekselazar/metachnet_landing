@@ -1,0 +1,104 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+<div class="mario-wrapper">
+  <div class="mario-background row">
+    <div class="mario col-lg-6 col-md-8 col-sm-12 col-12 text-center">
+      <h3>מספיק לשבור את הראש איך להתפרנס, טכנולוגיה יכולה לעבוד במקומינו</h3>
+      <img class="img-fluid mx-auto" src="{{ url_for('static', filename = 'img/mario-mining.gif') }}"></img>
+    </div>
+    <div class="col-lg-6 col-md-8 col-sm-9 col-9 mario-text">
+      {% if just_subscribed %}
+      <div class="alert alert-success" role="alert">
+        מזל טוב! נרשמתם בהצלחה
+      </div>
+      {% else %}
+      <div class="subscribe">
+        <h3>הרשמו לקבלת עדכונים</h3>
+        <form class="" action="{{ url_for('index') }}" method="POST">
+          {{ form.hidden_tag() }}
+          <div class="form-group">
+            <label for="name">שם פרטי</label>
+            {{ form.name(class = 'form-control') }}
+          </div>
+          <div class="form-group">
+            <label for="fname">שם משפחה</label>
+            {{ form.fname(class = 'form-control') }}
+          </div>
+          <div class="form-group">
+            <label for="email">אימייל</label>
+            {{ form.email(class = 'form-control') }}
+          </div>
+          <button type="submit" class="btn btn-primary">הרשם</button>
+        </form>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+<div class="video-row text-center row">
+  <div class="video embed-responsive embed-responsive-16by9 col-12 col-lg-8 col-md-8 col-sm-12">
+    <iframe class="embed-responsive-item" width="100%" src="https://www.youtube.com/embed/5uuncIkpbX4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</div>
+<hr class="solid">
+<div class="cards text-center">
+  <div class="how-it-works text-center">
+    <div class="img-wrapper col-lg-4 col-md-4 col-8 offset-2 offset-lg-4 offset-md-4">
+      <img class="img-fluid" src="{{ url_for('static', filename = 'img/main-logo.png') }}" alt="">
+      <h3>איך זה עובד</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="metach-card text-center col-5 col-lg-3 col-md-5 col-sm-4">
+      <img src="{{ url_for('static', filename = 'img/blockchain.jpeg') }}" class="img-fluid">
+      <h5 class="metach-card-title">בלוקצ'יין חדש</h5>
+      <p class="card-text">אנו ניצור מערכת על בסיס בלוקצ'יין חדשה לגמרי, כדי לבסס את הרעיון שלנו'</p>
+    </div>
+    <div class="metach-card text-center col-5 col-lg-3 col-md-5 col-sm-4">
+      <img src="{{ url_for('static', filename = 'img/algorythm.jpeg') }}" class="img-fluid">
+      <h5 class="metach-card-title">אלגוריטם חדש</h5>
+      <p class="card-text">בשביל גם לייעל את המערכת וגם לתתערך ריאלי לכל כח עיבוד באשר הוא, אנו מפתחים אלגוריתם חדש</p>
+    </div>
+    <div class="metach-card text-center col-5 col-lg-3 col-md-5 col-sm-4">
+      <img src="{{ url_for('static', filename = 'img/economics.jpeg') }}" class="img-fluid">
+      <h5 class="metach-card-title">כלכלה חדשה</h5>
+      <p class="card-text">כל זה מאפשר לנו ממש ליצור מערכת כלכלית חדשה טכנולוגית</p>
+    </div>
+  </div>
+  <hr class="dashed">
+  <div class="text-center white-paper-link">
+    <h3>ליותר מידע, אנא קראו את  ה"ספר הלבן" של פרוייקט</h3>
+  </div>
+  <a href="{{ url_for('white_paper') }}" class="btn btn-info">White Paper</a>
+</div>
+<hr class="solid">
+<div class="meet-team text-center">
+  <h2>הכירו אותנו</h2>
+  <div class="row">
+    <div class="col-12 col-lg-6 col-md-6 col-sm-12 text-center">
+      <img src="{{ url_for('static', filename = 'img/alex.jpg') }}" class="avatar">
+      <h5 class="metach-card-title">אלכס קרמר</h5>
+      <p class="card-text">נולד באוקראינה ב1991. עלה לארץ ב2005. לוחם צהל במילואים. נשוי פלוס שניים. טכנאי מחשבים. מפתח תוכנה מאז הבית ספר. מאמין שטכנולוגיה יכולה לשחרר אנשים</p>
+    </div>
+    <div class="col-12 col-lg-6 col-md-6 col-sm-12 text-center">
+      <img src="{{ url_for('static', filename = 'img/shlomo.jpg') }}" class="avatar">
+      <h5 class="metach-card-title">שלמה יוסיפון</h5>
+      <p class="card-text">נולד בישראל ב1994. לוחם צהל במילואים. נשוי פלוס שניים. טכנאי מחשבים. מאמין בכלכלה חופשית, שיוויונית וליבראלית</p>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="campain text-center">
+  <h2>התחלנו כבר גיוס</h2>
+  <h4>אז עם אתם רוצים שעולם ייתפתח לעידן כלכלי טכנולוגי חדש, תתמכו בנו ותשתפו</h4>
+  <a href="#" class="btn btn-info">headstart</a>
+</div>
+<hr>
+
+
+{% endblock %}

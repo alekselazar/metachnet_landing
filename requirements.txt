@@ -1,0 +1,15 @@
+Flask
+Flask-Admin
+Flask-Bcrypt
+Flask-DebugToolbar
+Flask-Login
+Flask-Mail
+Flask-Script
+Flask-SQLAlchemy
+Flask-WTF
+gunicorn
+itsdangerous
+pytz
+structlog
+WTForms
+stripe

@@ -1,0 +1,134 @@
+body{
+	width: 100%;
+	min-height: 100%;
+	margin: 0;
+	color: #4cb6ec;
+}
+
+a{
+	width: 100%;
+}
+
+form{
+	padding: 0 100px;
+}
+
+.navbar-brand{
+	width: fit-content;
+}
+
+.mario-wrapper{
+	background-image: url(../img/blockchain.jpg);
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+}
+
+.mario-background{
+	background-color: rgba(0,0,0,0.5);
+	text-shadow: rgba(0,0,0,0.8) 2px 2px 4px;
+}
+
+.mario{
+	width: 100%;
+}
+
+.mario-text{
+	position: relative;
+	text-align: center;
+}
+
+.watch-video{
+	position: relative;
+	top: 65%;
+	text-align: center;
+}
+
+.main-logo{
+	position: absolute;
+}
+
+.video-row{
+	height: fit-content;
+	display: flex;
+	padding: 40px 40px 0 40px;
+}
+
+.video{
+	position: relative;
+	display: inline-flex;
+	opacity: 0;
+	transition: all 1.5s ease-in-out;
+	padding: 10px;
+	right: -100%;
+	margin: auto;
+}
+
+.subscribe{
+	display: block;
+}
+
+.form-control{
+	margin-bottom: 20px;
+}
+
+.how-it-works{
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.metach-card{
+	margin: 0 auto;
+	color: #1d3444;
+}
+
+.btn{
+	width: auto;
+}
+
+.avatar{
+	border-radius: 50%;
+	background-color: #000;
+	width: 200px;
+	height: 200px;
+}
+
+.meet-team{
+	background-color: #1d3444;
+	padding: 70px 10px;
+}
+
+.campain, .white-paper-link{
+	margin: 60px 0;
+}
+
+.content{
+	color: #1d3444;
+	text-align: right;
+	padding: 40px;
+	direction: rtl;
+}
+
+.footer{
+	background-color: #1d3444;
+}
+
+@media screen and (max-width: 992px){
+	.watch-video{
+		display: none;
+	}
+
+	.mario-wrapper:after{
+		left: 50%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.mario-wrapper:after .wath-video{
+		display:none;
+	}
+
+	.subscribe{
+		position: relative;
+	}
+}
